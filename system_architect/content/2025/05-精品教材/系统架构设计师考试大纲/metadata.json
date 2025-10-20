@@ -1,0 +1,21 @@
+{
+  "id": "system-architect-exam-outline",
+  "title": "系统架构设计师考试大纲",
+  "subtitle": "全国计算机技术与软件专业技术资格(水平)考试",
+  "description": "2022年审定通过的系统架构设计师考试大纲，包括考试说明、考试范围、题型举例等完整内容，是备考系统架构设计师考试的权威指导文档。",
+  "author": "全国计算机专业技术资格考试办公室",
+  "category": "考试大纲",
+  "difficulty": "高级",
+  "tags": ["考试大纲", "系统架构设计师", "软考", "高级资格"],
+  "publishDate": "2022-11",
+  "lastUpdate": "2022-11",
+  "version": "2022版",
+  "pages": 34,
+  "readingTime": "120分钟",
+  "isbn": "978-7-302-62003-7",
+  "publisher": "清华大学出版社",
+  "language": "zh-CN",
+  "format": "markdown",
+  "featured": true,
+  "cover": "/imgs/2025/textbooks/exam-outline/cover-placeholder.jpg"
+}

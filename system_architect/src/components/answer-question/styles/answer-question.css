@@ -1,0 +1,282 @@
+/**
+ * 问答题组件专用样式
+ * 支持案例分析和论文指导的展示需求
+ */
+
+/* 问答题查看器容器 */
+.answer-question-viewer {
+  @apply bg-white dark:bg-gray-900 rounded-xl shadow-lg;
+}
+
+.answer-question-viewer--fullscreen {
+  @apply fixed inset-0 z-50 rounded-none;
+}
+
+/* 题目内容样式 */
+.answer-question-content {
+  @apply prose dark:prose-invert prose-lg max-w-none;
+}
+
+.answer-question-content h1,
+.answer-question-content h2,
+.answer-question-content h3 {
+  @apply text-gray-900 dark:text-gray-100;
+}
+
+.answer-question-content p {
+  @apply text-gray-700 dark:text-gray-300 leading-relaxed;
+}
+
+.answer-question-content ul,
+.answer-question-content ol {
+  @apply text-gray-700 dark:text-gray-300;
+}
+
+.answer-question-content code {
+  @apply bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-sm;
+}
+
+.answer-question-content pre {
+  @apply bg-gray-100 dark:bg-gray-800 rounded-lg p-4 overflow-x-auto;
+}
+
+/* 答案展示区域 */
+.answer-content {
+  @apply prose dark:prose-invert max-w-none;
+}
+
+.answer-content h1,
+.answer-content h2,
+.answer-content h3,
+.answer-content h4 {
+  @apply text-gray-900 dark:text-gray-100 font-semibold;
+}
+
+.answer-content h3 {
+  @apply text-lg mt-6 mb-3 border-l-4 border-blue-500 pl-4;
+}
+
+.answer-content p {
+  @apply text-gray-700 dark:text-gray-300 leading-relaxed mb-4;
+}
+
+.answer-content ul li,
+.answer-content ol li {
+  @apply text-gray-700 dark:text-gray-300 mb-1;
+}
+
+.answer-content ul li::marker {
+  @apply text-blue-500;
+}
+
+.answer-content strong {
+  @apply text-gray-900 dark:text-gray-100 font-semibold;
+}
+
+.answer-content code {
+  @apply bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 px-1.5 py-0.5 rounded text-sm;
+}
+
+/* 指导内容样式 */
+.guidance-content {
+  @apply prose dark:prose-invert max-w-none;
+}
+
+.guidance-content h3 {
+  @apply text-lg mt-6 mb-3 border-l-4 border-green-500 pl-4 text-green-800 dark:text-green-200;
+}
+
+.guidance-content p {
+  @apply text-gray-700 dark:text-gray-300 leading-relaxed mb-4;
+}
+
+.guidance-content ul li,
+.guidance-content ol li {
+  @apply text-gray-700 dark:text-gray-300 mb-1;
+}
+
+.guidance-content strong {
+  @apply text-green-800 dark:text-green-200 font-semibold;
+}
+
+/* 答案切换按钮样式 */
+.answer-toggle {
+  @apply w-full p-4 border-2 border-dashed rounded-xl transition-all duration-200;
+  @apply hover:border-blue-400 hover:bg-blue-50/50 dark:hover:bg-blue-900/10;
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500/20;
+}
+
+.answer-toggle--hidden {
+  @apply border-gray-300 dark:border-gray-600;
+}
+
+.answer-toggle--visible {
+  @apply border-blue-300 bg-blue-50 dark:bg-blue-900/20;
+}
+
+/* 可展开区域样式 */
+.expandable-section {
+  @apply rounded-xl p-4 border;
+}
+
+.expandable-section--amber {
+  @apply bg-amber-50 dark:bg-amber-900/20 border-amber-200 dark:border-amber-800;
+}
+
+.expandable-section--purple {
+  @apply bg-purple-50 dark:bg-purple-900/20 border-purple-200 dark:border-purple-800;
+}
+
+.expandable-section--blue {
+  @apply bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800;
+}
+
+.expandable-section--emerald {
+  @apply bg-emerald-50 dark:bg-emerald-900/20 border-emerald-200 dark:border-emerald-800;
+}
+
+.expandable-section--indigo {
+  @apply bg-indigo-50 dark:bg-indigo-900/20 border-indigo-200 dark:border-indigo-800;
+}
+
+.expandable-section--red {
+  @apply bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800;
+}
+
+/* 评分标准样式 */
+.grading-item {
+  @apply bg-white dark:bg-gray-800/30 rounded-lg p-3 border border-gray-100 dark:border-gray-700;
+}
+
+.grading-score {
+  @apply px-2 py-1 text-xs rounded-full font-medium;
+}
+
+.grading-score--points {
+  @apply bg-purple-100 dark:bg-purple-800 text-purple-700 dark:text-purple-300;
+}
+
+.grading-score--percentage {
+  @apply bg-blue-100 dark:bg-blue-800 text-blue-700 dark:text-blue-300;
+}
+
+/* 关键要点样式 */
+.key-point {
+  @apply flex items-start gap-2 text-sm;
+}
+
+.key-point__icon {
+  @apply w-4 h-4 mt-0.5 flex-shrink-0;
+}
+
+.key-point__icon--success {
+  @apply text-amber-600;
+}
+
+.key-point__icon--guide {
+  @apply text-emerald-600;
+}
+
+.key-point__text {
+  @apply text-amber-700 dark:text-amber-300;
+}
+
+.key-point__text--guide {
+  @apply text-emerald-700 dark:text-emerald-300;
+}
+
+/* 参考资料样式 */
+.reference-item {
+  @apply text-sm text-blue-700 dark:text-blue-300 pl-6 relative;
+}
+
+.reference-item::before {
+  content: counter(reference-counter) ".";
+  counter-increment: reference-counter;
+  @apply absolute left-2 text-blue-500 font-medium;
+}
+
+.reference-list {
+  counter-reset: reference-counter;
+}
+
+/* 常见问题样式 */
+.common-mistake {
+  @apply flex items-start gap-2 text-sm;
+}
+
+.common-mistake__icon {
+  @apply w-4 h-4 bg-red-100 dark:bg-red-800 text-red-600 dark:text-red-300 rounded-full flex items-center justify-center text-xs font-bold mt-0.5 flex-shrink-0;
+}
+
+.common-mistake__text {
+  @apply text-red-700 dark:text-red-300;
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    max-height: 1000px;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-down {
+  animation: slideDown 0.4s ease-out;
+}
+
+/* 响应式调整 */
+@media (max-width: 640px) {
+  .answer-question-content {
+    @apply prose-sm;
+  }
+  
+  .expandable-section {
+    @apply p-3;
+  }
+  
+  .grading-item {
+    @apply p-2;
+  }
+  
+  .answer-toggle {
+    @apply p-3;
+  }
+}
+
+/* 打印样式 */
+@media print {
+  .answer-toggle {
+    @apply hidden;
+  }
+  
+  .expandable-section {
+    @apply bg-transparent border-gray-300;
+  }
+  
+  .animate-fade-in,
+  .animate-slide-down {
+    animation: none;
+  }
+}
